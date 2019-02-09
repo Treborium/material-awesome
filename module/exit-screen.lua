@@ -41,14 +41,14 @@ end
 
 function suspend_command()
   exit_screen_hide()
-  awful.spawn.with_shell('i3lock-fancy-rapid 5 3 -k --timecolor=ffffffff --datecolor=ffffffff & systemctl suspend')
+  awful.spawn.with_shell('i3lock-fancy-rapid 5 30 & systemctl suspend')
 end
 function exit_command()
   awesome.quit()
 end
 function lock_command()
   exit_screen_hide()
-  awful.spawn.with_shell('sleep 1 && i3lock-fancy-rapid 5 3 -k --timecolor=ffffffff --datecolor=ffffffff')
+  awful.spawn.with_shell('sleep 1 && i3lock-fancy-rapid 5 30')
 end
 function poweroff_command()
   awful.spawn.with_shell('poweroff')
