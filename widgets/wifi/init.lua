@@ -42,7 +42,7 @@ widget_button:buttons(
             1,
             nil,
             function()
-                awful.spawn('wicd-client -n')
+                awful.spawn('networkmanager_dmenu')
             end
         )
     )
