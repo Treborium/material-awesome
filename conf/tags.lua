@@ -4,9 +4,9 @@ local gears = require('gears')
 
 local tags = {
     {
-        icon = 'google-chrome.png',
-        type = 'chrome',
-        defaultApp = 'google-chrome-beta',
+        icon = 'firefox.png',
+        type = 'firefox',
+        defaultApp = 'firefox',
         screen = 1
     },
     {
@@ -16,15 +16,15 @@ local tags = {
         screen = 1
     },
     {
-        icon = 'forum.png',
-        type = 'social',
-        defaultApp = 'station',
+        icon = 'picutre.png',
+        type = 'editing',
+        defaultApp = 'gimp',
         screen = 1
     },
     {
         icon = 'folder.png',
         type = 'files',
-        defaultApp = 'nautilus',
+        defaultApp = 'thunar',
         screen = 1
     },
     {
