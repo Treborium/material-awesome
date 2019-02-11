@@ -42,6 +42,24 @@ local globalKeys =
     end,
     {description = "focus previous by index", group = "client"}
   ),
+  awful.key({ modkey, "Shift" }, "Left",
+    function ()
+        local current_layout = awful.layout.getname(awful.layout.get(awful.screen.focused()))
+        local c = client.focus
+            awful.client.swap.bydirection("left", c, nil)
+    end,
+    {description = "swap with direction left", group = "client"}),
+    awful.key({ modkey, "Shift" }, "Right",
+      function ()
+        local current_layout = awful.layout.getname(awful.layout.get(awful.screen.focused()))
+        local c = client.focus
+          awful.client.swap.bydirection("right", c, nil)
+      end,
+      {description = "swap with direction right", group = "client"}),
+
+  awful.key({ modkey }, "o", function () _G.client.focus:move_to_screen() end,
+      {description = "move to screen", group = "client"}),
+
   awful.key(
     {modkey},
     "e",
