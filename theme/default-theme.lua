@@ -25,7 +25,7 @@ local awesome_overrides =
 
   theme.icons = theme.dir .. '/icons/'
   --theme.wallpaper = theme.dir .. '/wallpapers/pro-dark-shadow.png'
-  theme.wallpaper = '#e0e0e0'
+  theme.wallpaper = '#333'
   theme.font = 'Roboto medium 10'
   theme.title_font = 'Roboto medium 14'
 
