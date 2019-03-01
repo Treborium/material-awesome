@@ -32,6 +32,26 @@ local globalKeys =
     end,
     {description = 'focus previous by index', group = 'client'}
   ),
+  -- [[[
+  -- Move clients on and between monitors
+  awful.key({ modkey, 'Shift' }, 'Left',
+    function ()
+        local current_layout = awful.layout.getname(awful.layout.get(awful.screen.focused()))
+        local c = client.focus
+            awful.client.swap.bydirection('left', c, nil)
+    end,
+    {description = 'swap with direction left', group = 'client'}),
+    awful.key({ modkey, 'Shift' }, 'Right',
+      function ()
+        local current_layout = awful.layout.getname(awful.layout.get(awful.screen.focused()))
+        local c = client.focus
+          awful.client.swap.bydirection('right', c, nil)
+      end,
+      {description = 'swap with direction right', group = 'client'}),
+
+  awful.key({ modkey }, 'o', function () _G.client.focus:move_to_screen() end,
+      {description = 'move to screen', group = 'client'}),
+  -- ]]]
   awful.key(
     {modkey},
     'e',
@@ -70,7 +90,7 @@ local globalKeys =
   -- Standard program
   awful.key(
     {modkey},
-    'x',
+    'Return',
     function()
       awful.spawn(apps.default.terminal)
     end,
@@ -79,16 +99,16 @@ local globalKeys =
   awful.key({modkey, 'Control'}, 'r', _G.awesome.restart, {description = 'reload awesome', group = 'awesome'}),
   awful.key({modkey, 'Control'}, 'q', _G.awesome.quit, {description = 'quit awesome', group = 'awesome'}),
   awful.key(
-    {altkey, 'Shift'},
-    'l',
+    {modkey, 'Control'},
+    'Right',
     function()
       awful.tag.incmwfact(0.05)
     end,
     {description = 'increase master width factor', group = 'layout'}
   ),
   awful.key(
-    {altkey, 'Shift'},
-    'h',
+    {modkey, 'Control'},
+    'Left',
     function()
       awful.tag.incmwfact(-0.05)
     end,
