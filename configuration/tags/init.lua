@@ -6,7 +6,7 @@ local tags = {
   {
     icon = icons.chrome,
     type = 'chrome',
-    defaultApp = 'google-chrome-beta',
+    defaultApp = 'firefox',
     screen = 1
   },
   {
@@ -24,7 +24,7 @@ local tags = {
   {
     icon = icons.folder,
     type = 'files',
-    defaultApp = 'nautilus',
+    defaultApp = 'thunar',
     screen = 1
   },
   {
