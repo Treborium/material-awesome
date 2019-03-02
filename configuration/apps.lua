@@ -6,7 +6,7 @@ return {
     terminal = 'st',
     editor = 'code',
     rofi = 'rofi -show drun -theme ' .. filesystem.get_configuration_dir() .. '/configuration/rofi.rasi',
-    lock = 'i3lock-fancy-rapid 5 3 -k --timecolor=ffffffff --datecolor=ffffffff',
+    lock = 'i3lock-fancy-rapid 5 30',
     quake = 'alacritty --title QuakeTerminal'
   },
   -- List of apps to start once on start-up
