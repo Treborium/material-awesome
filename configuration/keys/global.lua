@@ -77,7 +77,7 @@ local globalKeys =
     {modkey},
     'l',
     function()
-      awful.spawn(apps.default.lock)
+      suspend_command()
     end
   ),
   awful.key(
