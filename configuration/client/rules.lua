@@ -21,6 +21,15 @@ awful.rules.rules = {
     rule_any = {name = {'QuakeTerminal'}},
     properties = {skip_decoration = true}
   },
+  {
+    rule_any = {name = {'Android Emulator'}},
+    properties = {
+      skip_decoration = true,
+      floating = true,
+      ontop = true,
+      placement = awful.placement.centered
+    }
+  },
   -- Titlebars
   {
     rule_any = {type = {'dialog'}, class = {'Wicd-client.py', 'calendar.google.com'}},
