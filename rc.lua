@@ -56,12 +56,15 @@ _G.client.connect_signal(
   end
 )
 
+-- Change border color of focused window
 _G.client.connect_signal(
   'focus',
   function(c)
     c.border_color = beautiful.border_focus
   end
 )
+
+-- Change border color of unfocused windows
 _G.client.connect_signal(
   'unfocus',
   function(c)
