@@ -49,12 +49,12 @@ _G.client.connect_signal(
 
 -- Enable sloppy focus, so that focus follows mouse.
 
-_G.client.connect_signal(
-  'mouse::enter',
-  function(c)
-    c:emit_signal('request::activate', 'mouse_enter', {raise = true})
-  end
-)
+-- _G.client.connect_signal(
+--   'mouse::enter',
+--   function(c)
+--     c:emit_signal('request::activate', 'mouse_enter', {raise = true})
+--   end
+-- )
 
 -- Change border color of focused window
 _G.client.connect_signal(
