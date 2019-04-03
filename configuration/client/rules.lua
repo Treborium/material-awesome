@@ -30,6 +30,15 @@ awful.rules.rules = {
       placement = awful.placement.centered
     }
   },
+  { 
+    rule_any = { class = {'Brave', 'libreoffice'}},
+    properties = { 
+      opacity = 1,
+      maximized = false,
+      floating = false 
+    }
+  },
+
   -- Titlebars
   {
     rule_any = {type = {'dialog'}, class = {'Wicd-client.py', 'calendar.google.com'}},
