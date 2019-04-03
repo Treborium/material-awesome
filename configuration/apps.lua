@@ -3,7 +3,7 @@ local filesystem = require('gears.filesystem')
 return {
   -- List of apps to start by default on some actions
   default = {
-    terminal = 'st',
+    terminal = 'termite',
     editor = 'code',
     rofi = 'rofi -show drun -theme ' .. filesystem.get_configuration_dir() .. '/configuration/rofi.rasi',
     lock = 'i3lock-fancy-rapid 5 5 --color=303030',
